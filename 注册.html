@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>核心产融</title>
+	<link rel="stylesheet" type="text/css" href="webcss/layout.css" />
+	<script src="webjs/jquery-1.12.2.min.js"></script>
+</head>
+<body>
+	<div class="header2">
+		<div class="headB">
+			<div class="web clearfix">
+				<a href="index.html" class="logo"><img src="webimages/logo.png" alt=""></a>
+				<div class="logotext">
+					<p class="text1">央企产业链金融</p>
+					<p class="text2">中核资源，国新华信联合发起</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="registerlogin">
+		<p class="bgimg"><img src="webimages/bannerimg_01.jpg" alt="" /></p>
+		<div class="registerloginM">
+			<div class="logintitle clearfix">
+				<h3 class="name1">注册</h3>
+				<p class="text1">已有账号？<a href="登录.html">立即登录</a></p>
+			</div>
+			<!--第一步-->
+			<div class="loginimport loginimport1">
+				<label class="textlabel"><input type="text" placeholder="输入手机号码" /></label>
+				<div class="validationinput">
+					<label class="textlabel"><input type="text" placeholder="输入验证码" /></label>
+					<a class="yzcode" href="javascript:;"><img src="webimages/yzm.jpg" alt="" /></a>
+				</div>
+				<div class="actionbuttons clearfix">
+					<div class="btn1"><p class="checkbox"><input type="checkbox" checked="checked" /><label></label></p>我已阅读并同意<a href="javascript:;" class="agreementbtn">《用户注册服务协议》</a></div>
+				</div>
+				<input type="button" class="loginbutton" value="注 册" onclick="window.location.href='会员中心-注册后账户安全.html'" />
+				<!---这儿的onclick事件是为了串页面所用，正常的浏览不是这样跳转页面-->
+			</div>
+			<!--第二步-->
+			<div class="loginimport loginimport2">
+				<div class="validationinput2">
+					<label class="textlabel"><input type="text" placeholder="请输入验证码" /></label>
+					<a class="yzcode cur" href="javascript:;">重新发送（60）</a><!--倒计时结束去掉cur-->
+				</div>
+				<p>验证码已发送到您的手机，请查看</p>
+				<label class="passwordlabel"><input type="password" placeholder="登录密码：6-20字符 数字和字母组合" maxlength="20" /><a class="cbtn1" href="javascript:;"></a></label>
+				<input type="button" class="loginbutton" value="注 册" />
+			</div>
+			<p class="hinttext1">[ 温馨提示 ]  市场有风险，投资需谨慎；交易信息已使用SSL加密技术，传输安全。</p>
+		</div>
+	</div>
+	<div class="footer2">
+		<div class="web">地址：广东省深圳市福田区侨香路3085号岭南大厦8A  |   粤ICP备16052855号Copyright©2017 核新产融（深圳）有限公司 版权所有</div>
+	</div>
+	<script src="layer/layer.js"></script>
+	<script src="webjs/layout.js"></script>
+	<script>
+		$(function(){
+			$(document).on("click",".agreementbtn",function(){
+				var html8="用户注册服务协议内容";
+				html8='<div class="securitybox4">'+html8+'</div>';
+				layer.alert('用户注册服务协议', {
+					title:"用户注册服务协议",
+				  	btn:["确定"],
+				  	area: ['600px', 'auto'],
+				  	content: html8
+				})
+			})
+			
+		})
+	</script>
+</body>
+</html>
